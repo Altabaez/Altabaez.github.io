@@ -68,7 +68,17 @@ section > h2 { font-size: 2rem; margin: 0.4rem 0 0.6rem; }
 section > p.lead { color: var(--muted); max-width: 640px; line-height: 1.6; }
 
 /* About */
-.about-body { margin-top: 1.6rem; color: var(--ink); line-height: 1.75; max-width: 760px; }
+.about-card {
+  margin-top: 1.6rem; display: flex; gap: 2rem; align-items: center;
+  background: var(--card); border: 1px solid var(--border); border-radius: 18px;
+  padding: 2rem; box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+.about-photo {
+  flex: none; width: 180px; height: 180px; border-radius: 50%; object-fit: cover;
+  border: 4px solid #eef2ff; box-shadow: 0 8px 20px rgba(15,23,42,0.12);
+}
+.about-body { color: var(--ink); line-height: 1.75; }
+@media (max-width: 640px) { .about-card { flex-direction: column; text-align: center; } }
 
 /* Project showcase */
 .project {
