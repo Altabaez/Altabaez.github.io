@@ -151,6 +151,26 @@ section > p.lead { color: var(--muted); max-width: 640px; line-height: 1.6; }
 .skill-ico svg { display: block; }
 .skill-ico-dual svg:first-child { margin-right: -2px; }
 
+/* Certifications */
+.certgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.1rem; margin-top: 1.6rem; }
+.certcard {
+  background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+  padding: 1.2rem 1.4rem; box-shadow: 0 6px 16px rgba(15,23,42,0.05);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.certcard:hover { transform: translateY(-3px); box-shadow: 0 12px 26px rgba(15,23,42,0.10); }
+.certcard .chead { display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 0.3rem; }
+.certcard .cyear {
+  background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff;
+  border-radius: 8px; padding: 0.2rem 0.7rem; font-weight: 800; font-size: 0.82rem;
+}
+.certcard .ccat { color: var(--muted); font-size: 0.82rem; font-weight: 600; }
+.certcard h4 { font-size: 1.0rem; line-height: 1.4; }
+.certcard p { color: var(--muted); font-size: 0.86rem; line-height: 1.6; margin-top: 0.5rem; }
+.certcard .tags { margin-top: 0.7rem; }
+.certcard .cevidence { margin-top: 0.8rem; display: inline-block; color: var(--accent); font-weight: 700; font-size: 0.86rem; text-decoration: none; }
+.certcard .cevidence:hover { text-decoration: underline; }
+
 /* Experience timeline */
 .journey { margin-top: 1.6rem; position: relative; padding-left: 2.2rem; }
 .journey::before {
